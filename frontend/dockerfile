@@ -1,0 +1,22 @@
+# Use an official Node runtime as a parent image
+FROM node:14-alpine
+
+# Set environment variables
+ENV NODE_ENV=production
+
+# Set work directory
+WORKDIR /app
+
+# Install dependencies
+COPY package.json .
+COPY package-lock.json .
+RUN npm install
+
+# Copy project
+COPY . .
+
+# Expose port
+EXPOSE 3000
+
+# Command to run on container start
+CMD ["npm", "start"]

@@ -1,0 +1,30 @@
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Take up remaining space */
+  }
+  
+  .navbar-center .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-center .navbar-right {
+    margin-left: auto;
+  }
+  
+  .navbar {
+    /* border: 1px solid #8f8f8f;  */
+    /* Add rounded corners to navbar */
+    /* border-radius: 1px;  */
+    /* background-color: #21b5cf; */
+    /* background-color: #1e222d; */
+    background-color: #0a1730;
+    /* Add any other styles you want for the navbar */
+}
+
+.nav-links {
+  color: white;
+  font-weight: bold;
+}

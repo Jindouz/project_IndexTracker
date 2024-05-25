@@ -1,0 +1,63 @@
+/* .bg-img {
+  background-image: url("https://i.imgur.com/VvT7XOB.jpeg");
+  background: linear-gradient(to right, #ffffff, #000000);
+  background: #f3f3f3;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+
+.bg-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* .bg-img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1511883040705-6011fad9edfc?q=80&w=2674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  filter: blur(5px);
+  opacity: 0.7;
+} */
+
+.bg-img > * {
+  position: relative;
+  z-index: 1; /* Ensure content is on top of the pseudo-element */
+}
+
+
+
+
+
+/* old arrow icons */
+.up-arrow::before {
+  position: absolute;
+  top: 10px; 
+  transform: translateX(-50%); /* Center the arrow horizontally */
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 8px solid rgb(52, 189, 52); /* Green color for up arrow */
+}
+
+.down-arrow::before {
+  position: absolute;
+  top: 10px;
+  transform: translateX(-50%);
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 8px solid rgb(223, 63, 63); /* Green color for down arrow */
+}
+

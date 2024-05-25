@@ -1,0 +1,40 @@
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  h1, h2, p {
+    text-align: center;
+  }
+  
+  /* ul {
+    list-style-type: none;
+    padding: 0;
+  } */
+  
+  li {
+    margin-bottom: 10px;
+  }
+
+ .inner-containers {
+    margin-bottom: 50px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+
+  .welcome {
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+
+  @media (max-width: 768px) {
+    .welcome {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+  }

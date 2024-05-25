@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+}
+
+
+.footer {
+  margin-top: 10px;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  /* line-height: 60px; */
+  background-color: #1e222d;
+  color: white;
+  border-top: 1px solid #c7c7c7;
+  z-index: 2;
+  padding: 10px;
+}
+/* background-color: hsl(0, 0%, 20%); */
+
+
+@media (max-width: 768px) {
+  .footer {
+      position: relative;
+      margin-top: -10px;
+  }
+}
+
+.app-img {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+
+  /* Create a pseudo-element for the background image */
+  &::before {
+    content: '';
+    background-image: url("https://i.imgur.com/0mKsmsU.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3; /* Adjust the opacity level (0 to 1) for the background image */
+    z-index: -1; /* Ensure the pseudo-element is behind other content */
+  }
+}
+
+.dark-mode {
+  /* background-color: #3a3a3a; */
+  /* background-color: #212529; */
+  background-color: #1e222d;
+  color: white;
+}
+
+.watchlist-dark-mode {
+  background-color: #1e222d;
+  color: white;
+
+}
+
+
+
+.text-box {
+  background-color: white;
+  color: #1e222d;
+}
+
+.test1 {
+  color: #13151b;
+}
+
+/* chart alt color - backgroundColor: '#13151b' */
+/* https://i.imgur.com/DRGZqH5.jpeg */
+/* https://i.imgur.com/LPk4ceA.png */
+/* https://i.imgur.com/bFAurj0.png */
+/* https://i.imgur.com/0mKsmsU.png */

@@ -1,0 +1,43 @@
+.main-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .right-side, .left-side {
+    width: 100%;
+    margin-top: -35px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .main-container {
+      flex-direction: row;
+    }
+  
+    .main-content {
+      width: 60%;
+    }
+  
+    .right-side {
+      width: 20%;
+    }
+  
+    .left-side {
+      width: 20%;
+    }
+  }
+  
+  @media only screen and (max-width: 767px) {
+    .main-content {
+      order: 1;
+    }
+  
+    .right-side {
+      order: 2;
+      margin-top: 1px;
+    }
+  
+    .left-side {
+      order: 3;
+      margin-top: 1px;
+    }
+  }
