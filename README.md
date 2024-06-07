@@ -162,8 +162,8 @@ https://index-tracker.netlify.app
 </a>
 
 ### AI Sentiment
-<a href="https://i.imgur.com/kW8rptr.jpeg">
-  <img src="https://i.imgur.com/kW8rptr.jpeg" alt="Alt text" style="max-width: 900px;">
+<a href="https://i.imgur.com/kP1LVCU.png">
+  <img src="https://i.imgur.com/kP1LVCU.png" alt="Alt text" style="max-width: 900px;">
 </a>
 
 ### Watchlist
