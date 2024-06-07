@@ -1,7 +1,7 @@
 # Index Tracker X
 Index Tracker X is a comprehensive application designed to track the indices of NASDAQ and Crypto stocks. It allows users to choose a symbol and view the daily and weekly stock data on a chart and research real-time stock sentiment with an AI tool. Users can log in to download daily and weekly data of their chosen stock, add or remove stocks from their watchlist, manage their profiles, and recover passwords via email.  
   
-The project is built using Django, React, TypeScript, and Redux, ensuring a robust and responsive experience.
+The project is built using Django, React, TypeScript, Redux and PostgreSQL, ensuring a robust and responsive experience.
 
 ## Features
 
@@ -9,6 +9,7 @@ The project is built using Django, React, TypeScript, and Redux, ensuring a robu
 * **Stock Tracking:** Tracks NASDAQ and Crypto stocks, fetched from Python packages.
 * **Chart Display:** Displays daily and weekly stock data on a chart.
 * **User Authentication:** Login (JWT access/refresh tokens), register, password change (in the profile page).
+* **PostgreSQL Database:** Stores data efficiently for streamlined retrieval and management.
 * **Password Recovery via Email:** Users can initiate a password reset process that will send their registered email a link to reset their password and set a new one.
 * **Watchlist:** Each registered user can manage his own watchlist. Users can add/remove chosen stocks to their watchlist, interacting with it will navigate them to the relevant page and load the stock of their choosing so they can view its data. (requires login)
 

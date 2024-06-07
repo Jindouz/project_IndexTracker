@@ -63,6 +63,7 @@ const IntradayViewer: React.FC = () => {
   const [sentimentMessage, setSentimentMessage] = useState<string | null>(null);
   const [loadingSentiment, setLoadingSentiment] = useState<boolean>(false);
   const [sentimentColor, setSentimentColor] = useState<string>('');
+  const [sentimentExtras, setSentimentExtras] = useState<string>('');
 
   // const selectWeeklyChartData = useAppSelector(selectChartDataWeekly);
   // const selectDailyChartData = useAppSelector(selectChartData);
@@ -84,10 +85,13 @@ const IntradayViewer: React.FC = () => {
       setSentimentMessage(sentimentData.message);
       let color = '';
       if (sentimentData.message === 'Positive') {
+        setSentimentExtras('(Favorable Trends)');
         color = '#7fff54';
       } else if (sentimentData.message === 'Negative') {
+        setSentimentExtras('(Unfavorable Trends)');
         color = '#ff5754';
       } else if (sentimentData.message === 'Neutral') {
+        setSentimentExtras('(Indecisive Trends)');
         color = 'white';
       }
       setSentimentColor(color);
@@ -619,7 +623,7 @@ const IntradayViewer: React.FC = () => {
       {sentimentMessage && (
         <div style={{ border: '1px solid white', borderRadius: '10px', margin: '0 auto', width: '90%', backgroundColor: '#0a1730' }}>
           <h4 className='animate__animated animate__fadeInDown'>The Current Sentiment Analysis for <span style={{ fontWeight: 'bold' }}>{symbolStatus}</span> is:</h4>
-          <h4 style={{ color: sentimentColor, fontWeight: 'bold' }} className='animate__animated animate__fadeInUp'>{sentimentMessage}</h4>
+          <h4 style={{ color: sentimentColor, fontWeight: 'bold' }} className='animate__animated animate__fadeInUp'>{sentimentMessage} {sentimentExtras}</h4>
           <br />
           <p style={{ color: 'grey' }}>*This sentiment analysis tool is based on an AI model that analyzes recent news sources and tweets associated with the selected stock.</p>
         </div>

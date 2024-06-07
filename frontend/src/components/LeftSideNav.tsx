@@ -31,11 +31,11 @@ const RightSideNav = () => {
         <div className="card animate__animated animate__fadeInLeft">
             <br />
             {showTradingView && (
-                <div>
+                <div style={{ borderRadius: '3px', border: '1px solid #808080', margin: '5px' }}>
                     <TradingViewNews
                         feedMode="symbol"
                         symbol={`NASDAQ:${symbol ? symbol : 'TSLA'}`}
-                        isTransparent={false}
+                        isTransparent={true}
                         displayMode="regular"
                         width={'90%'}
                         height={550}

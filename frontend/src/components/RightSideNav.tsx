@@ -19,11 +19,11 @@ const LeftSideNav = () => {
         <div className="card animate__animated animate__fadeInRight">
             <br />
             <div className="card">
-                <div>
+                <div style={{ borderRadius: '3px', border: '1px solid #808080', margin: '5px' }}>
                     <TradingViewMarketNews
                         feedMode="market"
                         market='stock'
-                        isTransparent={false}
+                        isTransparent={true}
                         displayMode="regular"
                         width={'90%'}
                         height={550}

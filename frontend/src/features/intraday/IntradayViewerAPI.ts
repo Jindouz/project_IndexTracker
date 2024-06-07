@@ -1,11 +1,10 @@
 import axios from 'axios';
 
 // export const baseURL = 'http://localhost:5000'; // flask
-// export const baseURL = 'https://deploy-intraday-stocks.onrender.com'; // render_old
-
-export const baseURL = 'http://127.0.0.1:8000'; // django
-// export const baseURL = 'https://project-stocks-django.onrender.com'; // render
 // export const baseURL = 'https://docker-django-stocks.onrender.com'; // render docker (it exceeds the 512mb ram render limit on free tier so can't use that for now)
+
+export const baseURL = 'http://127.0.0.1:8000'; // django #development
+// export const baseURL = 'https://project-stocks-django.onrender.com'; // django render #production
 
 export const fetchStockSymbols = async () => {
     try {

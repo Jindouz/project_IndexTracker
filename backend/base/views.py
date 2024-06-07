@@ -9,7 +9,7 @@ import json
 from rest_framework.response import Response
 from base.models import WatchlistItem
 from base.utils.intraday import intraday_daily, intraday_weekly
-from base.utils.vader_sentiment_v1 import main
+from base.utils.AI_sentiment import main
 from base.utils.logger import log_401_error, log_action
 import yfinance as yf
 from django.views.decorators.csrf import csrf_exempt
@@ -54,7 +54,7 @@ def get_watchlist(request):
 @permission_classes([IsAuthenticated])
 def add_to_watchlist(request):
     if request.method == 'POST':
-        symbol = request.data.get('symbol')  # Use request.data instead of request.POST
+        symbol = request.data.get('symbol')
         if symbol:
             # Assuming the user is logged in
             user = request.user
@@ -70,7 +70,7 @@ def add_to_watchlist(request):
 @permission_classes([IsAuthenticated])
 def remove_from_watchlist(request):
     if request.method == 'POST':
-        symbol = request.data.get('symbol')  # Use request.data instead of request.POST
+        symbol = request.data.get('symbol')
         if symbol:
             # Assuming the user is logged in
             user = request.user
