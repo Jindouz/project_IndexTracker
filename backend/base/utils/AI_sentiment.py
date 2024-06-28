@@ -1,3 +1,6 @@
+# this script is used to perform sentiment analysis on stock news and tweets 
+# it uses the NLTK library and the VADER sentiment analyzer
+
 import csv
 import json
 import os
@@ -7,17 +10,13 @@ from nltk.sentiment import SentimentIntensityAnalyzer
 from .google_get_news import scrape_google_news
 from .tweets_get_news import scrape_finviz_tweets
 
-# Set the path to the NLTK data
+# Path to the NLTK data
 nltk.data.path.append('./')
-
-# Download the Vader lexicon - REQUIRED FOR DEPLOY
-# nltk.download('vader_lexicon')
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def get_csv_folder_path():
     return os.path.join(BASE_DIR, 'data')
-
 
 def read_stock_news(filename):
     stock_news = []
@@ -53,7 +52,7 @@ def analyze_sentiment(text):
         return "Neutral"
 
 def main(stock_symbol):
-    # Scrape stock symbols
+    # Scrape news and tweets
     scrape_google_news(stock_symbol)
     scrape_finviz_tweets(stock_symbol)
 

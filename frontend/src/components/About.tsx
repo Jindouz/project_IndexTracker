@@ -28,8 +28,8 @@ const About = () => {
       <div className='inner-containers'>
         <h2 className='animate__animated animate__flipInX'>Other Projects</h2>
         <ul>
-        <li><strong><a href="https://rct-supermarket.netlify.app" target="_blank" rel="noopener noreferrer"  style={{color:'cyan'}}>Night Market Groceries:</a></strong> Experience convenient grocery shopping with Night Market Groceries, featuring a seamless PayPal checkout process.</li>
-        <li><strong><a href="https://nightcity-library.netlify.app" target="_blank" rel="noopener noreferrer"  style={{color:'cyan'}}>Night City Library:</a></strong> Simplifying library management with Night City Library, a project designed for efficient cataloging and organization.</li>
+        <li><strong><a href="https://rct-supermarket.netlify.app" target="_blank" rel="noopener noreferrer"  style={{color:'cyan'}}>Night Market Groceries</a> <a href="https://github.com/Jindouz/project_MarketGroceries" target="_blank" rel="noopener noreferrer"  style={{color:'cyan'}}>(GIT):</a> </strong> Experience convenient grocery shopping with Night Market Groceries, featuring a seamless PayPal checkout process.</li>
+        <li><strong><a href="https://nightcity-library.netlify.app" target="_blank" rel="noopener noreferrer"  style={{color:'cyan'}}>Night City Library</a> <a href="https://github.com/Jindouz/project_CityLibrary" target="_blank" rel="noopener noreferrer"  style={{color:'cyan'}}>(GIT):</a> </strong> Simplifying library management with Night City Library, a project designed for efficient cataloging and organization.</li>
       </ul>
       </div>
       <br />
@@ -37,7 +37,7 @@ const About = () => {
       <p className='inner-containers'>At Index Tracker X, we're committed to providing innovative solutions for your investment needs. Join us and take control of your financial journey today!</p>
 
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <a href="https://github.com/Jindouz" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/Jindouz/project_IndexTracker" target="_blank" rel="noopener noreferrer">
           <GitHubIcon sx={{ fontSize: 50, color: 'cyan' }} />
         </a>
       </div>

@@ -1,3 +1,6 @@
+# this script is used to fetch intraday data and save it to CSV
+# it uses the yfinance library
+
 import os
 from django.conf import settings
 import yfinance as yf
@@ -17,10 +20,13 @@ def intraday_daily(symbol):
     try:
         # Calculate the end date
         current_time = datetime.now()
+
         # Define the current time as Eastern Timezone
         eastern = pytz.timezone('US/Eastern')
+
         # Convert UTC time to Eastern Time
         end_date = current_time.astimezone(eastern)
+
         # start_date = (end_date - timedelta(hours=24)).strftime('%Y-%m-%d')
         start_date = end_date - timedelta(hours=24)
 

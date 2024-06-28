@@ -1,3 +1,6 @@
+# this script is used to get stock news from google
+# it uses the BeautifulSoup library and the requests library
+
 import csv
 import os
 from bs4 import BeautifulSoup

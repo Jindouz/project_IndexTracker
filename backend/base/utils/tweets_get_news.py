@@ -1,3 +1,6 @@
+# this script is used to get stock related tweets from stocktwits
+# it uses the requests library
+
 import os
 import requests
 import json
