@@ -145,7 +145,7 @@ To run backend tests, use:
 
 ```
 cd backend
-python manage.py test
+python manage.py test --keepdb
 ```
 
 ## Usage
