@@ -6,7 +6,7 @@ import { TextField, CircularProgress, Autocomplete, Tabs, Tab, Button } from '@m
 import { toast } from 'react-toastify';
 import './IntradayViewer.css';
 import { useAppDispatch, useAppSelector } from '../app/hooks';
-import { fetchCryptoSymbolsAsync, fetchSentimentAsync, selectCryptoSymbols, selectSentimentData, selectSymbolCrypto, setSymbolCrypto } from '../features/intraday/IntradayViewerSlice';
+import { fetchCryptoSymbolsAsync, fetchDataAsync, fetchDataWeeklyAsync, fetchSentimentAsync, selectChartData, selectChartDataWeekly, selectCryptoSymbols, selectSentimentData, selectSymbolCrypto, setSymbolCrypto } from '../features/intraday/IntradayViewerSlice';
 import { baseURL } from '../features/intraday/IntradayViewerAPI';
 import { format } from 'date-fns';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
@@ -51,6 +51,9 @@ const CryptoViewer: React.FC = () => {
   const symbol = useAppSelector(selectSymbolCrypto);
   const sentimentData = useAppSelector(selectSentimentData);
   const logged = useAppSelector(selectIsLoggedIn);
+
+  const slicerChartData = useAppSelector(selectChartData);
+  const slicerWeeklyChartData = useAppSelector(selectChartDataWeekly);
 
   const [sentimentMessage, setSentimentMessage] = useState<string | null>(null);
   const [loadingSentiment, setLoadingSentiment] = useState<boolean>(false);
@@ -120,9 +123,11 @@ const CryptoViewer: React.FC = () => {
 
   const fetchDataDaily = async (symbol: string) => {
     try {
+      // dispatch(fetchDataAsync(symbol)); //Fetching data with Redux Thunk (disabled because it's proven to be slower compared to directly using axios in the component for this app)
+      // const data = slicerChartData;
+
       const response = await axios.post(`${baseURL}/intraday_data`, { symbol });
       const data = response.data;
-
 
       if (data && typeof data === 'string') {
         const parsedData = parseCsvData(data);
@@ -167,11 +172,11 @@ const CryptoViewer: React.FC = () => {
 
   const fetchDataWeekly = async (symbol: string) => {
     try {
+      // dispatch(fetchDataWeeklyAsync(symbol)); //Fetching data with Redux Thunk (disabled because it's proven to be slower compared to directly using axios in the component for this app)
+      // const data = slicerWeeklyChartData;
+
       const response = await axios.post(`${baseURL}/intraday_data_weekly`, { symbol });
       const data = response.data;
-
-      // dispatch(await fetchDataAsync(symbol));
-      // const data = dailyData;
 
       if (data && typeof data === 'string') {
         const parsedData = parseCsvData(data);

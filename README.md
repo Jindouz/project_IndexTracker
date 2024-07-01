@@ -28,7 +28,7 @@ The project is built using Django, React, TypeScript, Redux and PostgreSQL, ensu
 ### Backend Features
 * **JWT Authentication:** Implements a JWT system for secure login and session management.
 * **Login Logger:** A decorator that allows admin users to track login logs, viewable in an admin page component in the frontend.
-* **Django Unittest:** Backend testing with python manage.py test.
+* **Django Unittest:** Backend testing with ``python manage.py test --keepdb``.
 
 
 ## Installation
