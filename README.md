@@ -1,4 +1,6 @@
 # Index Tracker X
+https://index-tracker.netlify.app  
+
 Index Tracker X is a comprehensive application designed to track the indices of NASDAQ and Crypto stocks. It allows users to choose a symbol and view the daily and weekly stock data on a chart and research real-time stock sentiment with an AI tool. Users can log in to download daily and weekly data of their chosen stock, add or remove stocks from their watchlist, manage their profiles, and recover passwords via email.  
   
 The project is built using Django, React, TypeScript, Redux and PostgreSQL, ensuring a robust and responsive experience.

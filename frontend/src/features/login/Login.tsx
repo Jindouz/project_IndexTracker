@@ -99,7 +99,6 @@ const Login: React.FC = () => {
       </Box>
       {error && <Typography sx={{ mt: 2, color: 'red', fontSize: '14px' }}>{error}</Typography>}
       {isLoggedIn && <Typography sx={{ mt: 2, color: 'green', fontSize: '14px' }}>Login successful!</Typography>}
-      <Typography sx={{ mt: 2, color: 'white', fontSize: '14px' }}>(Admin account: waga1/123)</Typography>
     </Container>
   );
 };
